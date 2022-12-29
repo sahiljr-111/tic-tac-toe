@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tik Tak Tio</title>
+	<style type="text/css">
+		.container{
+			width: 300px;
+			margin: auto;
+		}
+		#name{
+			width: 300px;
+			margin: auto;
+			text-align: center;
+			font-size: 40px;
+			font-weight: 900;
+			font-family: calibri;
+		}
+		td input{
+			height: 100px;
+			width: 100px;
+			background:none;
+			border: 5px solid black;
+			background-color:lightslategrey;
+			color: White;
+			font-size: 35px;
+			border-radius: 20px;
+			text-shadow: 0px 0px 2px aliceblue;
+			cursor: pointer;
+			box-shadow: 0px 0px 2px black;
+		}
+		#disp{
+			height: 50px;
+			width: 300px;
+		}
+		#reset{
+			height: 40px;
+			width: 70px;
+			text-align: center;
+			border: 2px solid black;
+			border-radius: 5px;
+			color: black;
+			background-color: lightgreen;
+			font-size: 17px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var cnt=0;
+		var x = 'X';
+		var o = 'O';
+		function getval1(n1){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in1').value = x; cnt++;
+				document.getElementById('in1').disabled = true; fun1 = x;
+			} 
+			else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in1').value = o; cnt++;
+				document.getElementById('in1').disabled = true; fun1 = o;
+			}
+		}
+
+		function getval2(n2){		
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in2').value = x; cnt++;
+				document.getElementById('in2').disabled = true; fun2 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in2').value = o; cnt++;
+				document.getElementById('in2').disabled = true; fun2 = o;
+			}
+
+		}
+
+		function getval3(n3){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in3').value = x; cnt++;
+				document.getElementById('in3').disabled = true; fun3 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in3').value = o; cnt++;
+				document.getElementById('in3').disabled = true; fun3 = o;
+			}
+		}
+
+		function getval4(n4){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in4').value = x; cnt++;
+				document.getElementById('in4').disabled = true; fun4 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in4').value = o; cnt++;
+				document.getElementById('in4').disabled = true; fun4 = o;
+			}
+		}
+
+		function getval5(n5){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in5').value = x; cnt++;
+				document.getElementById('in5').disabled = true; fun5 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in5').value = o; cnt++;
+				document.getElementById('in5').disabled = true; fun5 = o;
+			}
+		}
+
+		function getval6(n6){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in6').value = x; cnt++;
+				document.getElementById('in6').disabled = true; fun6 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in6').value = o; cnt++;
+				document.getElementById('in6').disabled = true; fun6 = o;
+			}
+		}
+
+		function getval7(n7){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in7').value = x; cnt++;
+				document.getElementById('in7').disabled = true; fun7 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in7').value = o; cnt++;
+				document.getElementById('in7').disabled = true; fun7 = o;
+			}
+		}
+
+		function getval8(n8){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in8').value = x; cnt++;
+				document.getElementById('in8').disabled = true; fun8 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in8').value = o; cnt++;
+				document.getElementById('in8').disabled = true; fun8 = o;
+			}
+		}
+
+		function getval9(n9){
+			if(cnt%2==0){
+				document.getElementById('name').innerHTML="Player O turn";
+				document.getElementById('in9').value = x; cnt++;
+				document.getElementById('in9').disabled = true; fun9 = x;
+			} else{
+				document.getElementById('name').innerHTML="Player X turn";
+				document.getElementById('in9').value = o; cnt++;
+				document.getElementById('in9').disabled = true; fun9 = o;
+			}
+		}
+
+		var fun1=document.getElementById('in1');
+		var fun2=document.getElementById('in2');
+		var fun3=document.getElementById('in3');
+		var fun4=document.getElementById('in4');
+		var fun5=document.getElementById('in5');
+		var fun6=document.getElementById('in6');
+		var fun7=document.getElementById('in7');
+		var fun8=document.getElementById('in8');
+		var fun9=document.getElementById('in9');
+
+		function chackwin(){
+			// 123
+			if ((fun1=='X')&&(fun2=='X')&&(fun3=='X')) {
+				document.getElementById('name').innerHTML="Player X is winn"; disp(); 
+			} else if((fun1=='O')&&(fun2=='O')&&(fun3=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			//456 
+			else if((fun4=='X')&&(fun5=='X')&&(fun6=='X')){
+				document.getElementById('name').innerHTML="Player X is winn"; disp();
+			} else if((fun4=='O')&&(fun5=='O')&&(fun6=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			// 789
+			else if((fun7=='X')&&(fun8=='X')&&(fun9=='X')){
+				document.getElementById('name').innerHTML="Player X is winn"; disp();
+			} else if((fun7=='O')&&(fun8=='O')&&(fun9=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			//147
+			else if((fun1=='X')&&(fun4=='X')&&(fun7=='X')){
+				document.getElementById('name').innerHTML="Player X is winn"; disp();
+			} else if((fun1=='O')&&(fun4=='O')&&(fun7=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			//258
+			else if((fun2=='X')&&(fun5=='X')&&(fun8=='X')){
+				document.getElementById('name').innerHTML="Player X is winn"; disp();
+			} else if((fun2=='O')&&(fun5=='O')&&(fun8=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			//369
+			else if((fun3=='X')&&(fun6=='X')&&(fun9=='X')){
+				document.getElementById('name').innerHTML="Player X is winn"; disp();
+			} else if((fun3=='O')&&(fun6=='O')&&(fun9=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			//159
+			else if((fun1=='X')&&(fun5=='X')&&(fun9=='X')){
+				document.getElementById('name').innerHTML="Player X is winn"; disp();
+			} else if((fun1=='O')&&(fun5=='O')&&(fun9=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			// 357
+			else if((fun3=='X')&&(fun5=='X')&&(fun7=='X')){
+				document.getElementById('name').innerHTML="Player X is winn"; disp();
+			} else if((fun3=='O')&&(fun5=='O')&&(fun7=='O')){
+				document.getElementById('name').innerHTML="Player O is winn"; disp();
+			}
+			// TIE
+			else if((fun1=='X'||fun1=='O')&&(fun2=='X'||fun2=='O')&&(fun3=='X'||fun3=='O')&&(fun4=='X'||fun4=='O')&&(fun5=='X'||fun5=='O')&&(fun6=='X'||fun6=='O')&&(fun7=='X'||fun7=='O')&&(fun8=='X'||fun8=='O')&&(fun9=='X'||fun9=='O'))
+			{
+				document.getElementById('name').innerHTML="Match draw";
+			}
+		}	
+		function disp(){
+			document.getElementById('in1').disabled=true;
+			document.getElementById('in2').disabled=true;
+			document.getElementById('in3').disabled=true;
+			document.getElementById('in4').disabled=true;
+			document.getElementById('in5').disabled=true;
+			document.getElementById('in6').disabled=true;
+			document.getElementById('in7').disabled=true;
+			document.getElementById('in8').disabled=true;
+			document.getElementById('in9').disabled=true;
+		}
+		function restart(){
+			location.reload();
+		}
+	</script>
+		
+</head>
+<body>
+	<div class="container">
+		<div id="name">Player X turn</div>
+		<table>
+			<tr>
+				<td><input type="button" onclick="getval1(1); chackwin()" id="in1"></td>
+				<td><input type="button" onclick="getval2(2); chackwin()" id="in2"></td>
+				<td><input type="button" onclick="getval3(3); chackwin()" id="in3"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="getval4(4); chackwin()" id="in4"></td>
+				<td><input type="button" onclick="getval5(5); chackwin()" id="in5"></td>
+				<td><input type="button" onclick="getval6(6); chackwin()" id="in6"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="getval7(7); chackwin()" id="in7"></td>
+				<td><input type="button" onclick="getval8(8); chackwin()" id="in8"></td>
+				<td><input type="button" onclick="getval9(9); chackwin()" id="in9"></td>
+
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><input type="button" value="Reset" onclick="restart()" id="reset"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
